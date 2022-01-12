@@ -6,4 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository
 interface BookRepository: MongoRepository<Book, String> {
 
     fun findByName(name: String): Book
+
+    fun findByEdition(int: Int):Book
 }
