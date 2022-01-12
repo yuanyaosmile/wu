@@ -4,4 +4,7 @@ import com.example.wu.entity.Book
 
 interface BookService {
     fun findByName(bookName: String) : Book
+
+    fun saveBook(book: Book)
+
 }
