@@ -6,7 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "start"'
+                script {
+                     sh 'echo "start"'
+                     jobName = "${env.JOB_NAME}"
+                     sh 'echo jobName'
+                }
+                
             }
         }
         stage('Test') {
