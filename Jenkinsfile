@@ -1,15 +1,15 @@
 pipeline {
     agent any
-   /*  environment {
-        CI = 'true'
-    } */
+    environment {
+        jobName = "${env.JOB_NAME}"
+    }
     stages {
         stage('Build') {
             steps {
                 script {
                      sh 'echo "start"'
-                     jobName = "${env.JOB_NAME}"
-                     sh 'echo "${env.JOB_NAME}"'
+                     
+                     echo jobName
                 }
                 
             }
