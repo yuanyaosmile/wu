@@ -9,7 +9,7 @@ pipeline {
                 script {
                      sh 'echo "start"'
                      jobName = "${env.JOB_NAME}"
-                     sh 'echo jobName'
+                     sh 'echo $jobName'
                 }
                 
             }
