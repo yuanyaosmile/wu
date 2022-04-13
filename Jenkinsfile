@@ -4,7 +4,6 @@ pipeline {
     agent any
     environment {
         jobName = "${env.JOB_NAME}"
-        NAME = jobName =~ "^(.+?/)"
 
     }
     stages {
@@ -14,7 +13,7 @@ pipeline {
                      sh 'echo "start"'
                      
                      echo jobName
-                     echo NAME
+                     echo jobName =~ "^(.+?/)"
                 }
                 
             }
