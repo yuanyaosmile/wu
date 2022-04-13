@@ -4,7 +4,7 @@ pipeline {
     agent any
     environment {
         jobName = "${env.JOB_NAME}"
-        NAME = (jobName =~ "^(.+?/)")
+        NAME = jobName =~ "^(.+?/)"
 
     }
     stages {
